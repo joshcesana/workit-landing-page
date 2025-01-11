@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets"
+import FounderImage from "../images/image-founder.webp"
+import bgPattern3Image from "/images/bg-pattern-3.svg"
+---
+
+<section class="flex justify-center px-5 pt-40 sm:px-11 sm:pt-[21rem] lg:pt-96 xl:px-0">
+    <div class="relative flex max-w-6xl flex-col sm:flex-row">
+        <div class="-mb-12 px-6 sm:absolute sm:z-10 sm:-mt-44 sm:max-w-72 sm:px-0 lg:max-w-[29.8125rem]">
+            <Image src={FounderImage} alt="" />
+        </div>
+        <div
+            class="flex flex-col items-center gap-8 bg-purple-900 p-8 text-white sm:z-20 sm:ml-44 md:items-start md:p-12 lg:ml-[24.375rem] lg:p-16"
+        >
+            <h2 class="font-serif text-[2rem] md:text-left md:text-5xl lg:text-[3.5rem]">Be the first to test</h2>
+            <p class="text-center font-sans text-base leading-[1.8] md:text-left">
+                Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a beta tester for our app and kickstart
+                your company. Apply for access below and I'll be in touch to schedule a call.
+            </p>
+            <a class="button md:text-lg">Apply for access</a>
+            <Image class="absolute left-[31rem] top-[17rem] hidden md:block lg:left-[48rem] lg:top-[16rem]" src="/images/bg-pattern-3.svg" width="225" height="178" alt=""  />
+        </div>
+    </div>
+</section>

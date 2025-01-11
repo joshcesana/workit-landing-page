@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Nav from "../components/Nav.astro"
+import Hero from "../components/Hero.astro"
+import Value from "../components/Value.astro"
+import Cta from "../components/Cta.astro"
+import Footer from "../components/Footer.astro"
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "workit - Features"
+const description = "Detailed information on workit's services."
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title={title} description={description}>
+    <Nav />
+	<Hero />
+    <main>
+        <Value />
+        <Cta />
+    </main>
+    <Footer />
+</BaseLayout>

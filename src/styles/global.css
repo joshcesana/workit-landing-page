@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Fraunces";
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        src: url(/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2) format("woff2-variations");
+        font-variation-settings: "SOFT" 0, "WONK" 0;
+    }
+
+    @font-face {
+        font-family: "Manrope";
+        font-optical-sizing: auto;
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+        src: url(/fonts/Manrope-VariableFont_wght.woff2) format("woff2-variations");
+    }
+}
+
+.button {
+    @apply cursor-pointer border-2 border-green bg-green px-8 py-3 text-base font-bold text-purple-900 hover:border-2 hover:border-green hover:bg-purple-900 hover:text-green sm:px-9 sm:py-3;
+}
+
+.curve {
+    position: relative;
+}
+
+.curve::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: inherit;
+    height: 5rem;
+    left: 0;
+    bottom: -4.5rem;
+    clip-path: ellipse(73% 101% at 50% -54%);
+
+    @screen sm {
+        height: 5rem;
+        bottom: -3.5rem;
+        clip-path: ellipse(58% 134% at 50% -39%);
+    }
+
+    @screen lg {
+        height: 7rem;
+        bottom: -6rem;
+        clip-path: ellipse(54% 93% at 50% -21%);
+    }
+}

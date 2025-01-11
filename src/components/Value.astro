@@ -1,0 +1,40 @@
+---
+const values = [
+    {
+        number: 1,
+        title: "Actionable insights",
+        description:
+            "Optimize your products, improve customer satisfaction and stay ahead of the competition with our product data analytics.",
+    },
+    {
+        number: 2,
+        title: "Data-driven decisions",
+        description:
+            "Make data-driven decisions with our product data analytics. Our AI-generated reports help you unlock insights hidden in your product data.",
+    },
+    {
+        number: 3,
+        title: "Always affordable",
+        description:
+            "Always affordable pricing that scales with your business. Get top-quality product data analytics services without hidden costs or unexpected fees.",
+    },
+]
+---
+
+<section class="curve flex justify-center bg-purple-100 pb-8 md:pb-20">
+    <div class="flex max-w-6xl flex-col gap-14 px-5 pb-12 pt-16 md:items-start md:gap-8 md:px-11 md:pb-11 md:pt-16 lg:flex-row xl:px-0">
+        {
+            values.map((value) => (
+                <div class="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-14 lg:flex-col">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full border border-purple-500 font-serif text-2xl font-semibold text-purple-900 md:h-12 md:w-12 md:p-5 md:leading-none lg:h-14 lg:w-14">
+                        {value.number}
+                    </div>
+                    <div class="flex flex-col gap-5 text-center text-purple-900 md:gap-7 md:text-left">
+                        <h2 class="text-nowrap font-serif text-2xl font-semibold lg:text-center lg:text-[2rem]">{value.title}</h2>
+                        <p class="font-sans text-base leading-[1.8] lg:text-center lg:text-lg">{value.description}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

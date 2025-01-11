@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets"
+import LogoLightSvg from "../images/logo-light.svg"
+// 680px to rem: 42.5
+---
+
+<nav class="flex justify-center bg-purple-900 px-5 pb-2 pt-8 font-sans text-white md:px-11 md:pb-0 md:pt-8 lg:pt-14">
+    <div class="flex w-full max-w-6xl justify-between xl:px-0">
+        <div class="w-24">
+            <a href="/">
+                <Image src={LogoLightSvg} alt="Astro logo" loading="eager" />
+            </a>
+        </div>
+        <a href="#" class="text-lg font-bold underline decoration-green decoration-3 underline-offset-8 hover:text-green"
+            >Apply for access</a
+        >
+    </div>
+</nav>

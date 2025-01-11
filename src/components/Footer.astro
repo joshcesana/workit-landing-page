@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets"
+import DarkLogoImage from "../images/logo-dark.svg"
+import FacebookIcon from "../images/icon-facebook.svg"
+import InstagramIcon from "../images/icon-instagram.svg"
+import TwitterIcon from "../images/icon-twitter.svg"
+
+const icons = [
+    { src: FacebookIcon, alt: "Facebook icon" },
+    { src: TwitterIcon, alt: "Twitter icon" },
+    { src: InstagramIcon, alt: "Instagram icon" },
+]
+---
+
+<footer class="mx-auto flex w-[7.25rem] flex-col gap-14 py-20 lg:py-28">
+    <div class="flex justify-center">
+        <Image src={DarkLogoImage} alt="Company logo" />
+    </div>
+    <div class="flex justify-between">
+        {
+            icons.map((icon) => (
+                <div>
+                    <Image src={icon.src} width={20} height={20} alt={icon.alt} />
+                </div>
+            ))
+        }
+    </div>
+</footer>
