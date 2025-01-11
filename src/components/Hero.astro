@@ -18,7 +18,13 @@ import HeroImage from "../images/image-hero.webp"
     </div>
     <div class="relative z-50 -mt-20 flex justify-center sm:-mt-32 lg:-mt-56">
         <div class="flex max-w-80 justify-center sm:max-w-[32.125rem] lg:max-w-3xl">
-            <Image loading="eager" src={HeroImage} alt="" />
+            <Image
+                src={HeroImage}
+                alt=""
+                loading="eager"
+                widths={[320, 514, 767]}
+                sizes="(max-width: 640px) 320px, (max-width: 1023px) 514px, 767px"
+            />
         </div>
     </div>
 </section>

@@ -7,7 +7,12 @@ import bgPattern3Image from "/images/bg-pattern-3.svg"
 <section class="flex justify-center px-5 pt-40 sm:px-11 sm:pt-[21rem] lg:pt-96 xl:px-0">
     <div class="relative flex max-w-6xl flex-col sm:flex-row">
         <div class="-mb-12 px-6 sm:absolute sm:z-10 sm:-mt-44 sm:max-w-72 sm:px-0 lg:max-w-[29.8125rem]">
-            <Image src={FounderImage} alt="" />
+            <Image 
+                src={FounderImage} 
+                alt="" 
+                widths={[280, 477]}
+                sizes="(max-width: 1023px) 280px, 477px"
+            />
         </div>
         <div
             class="flex flex-col items-center gap-8 bg-purple-900 p-8 text-white sm:z-20 sm:ml-44 md:items-start md:p-12 lg:ml-[24.375rem] lg:p-16"
